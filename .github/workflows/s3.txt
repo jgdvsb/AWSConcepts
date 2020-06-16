@@ -1,0 +1,199 @@
+S3 : Simple storage service : 
+
+block based storage : EBS / Instancestore :  Designed to run OS.. 
+object based storage : s3 : Designed to store the flat files.. We cannot install/run the applications.. 
+network based storage : EFS / FSx : Storage over the network.. 
+
+
+S3: Object based storage.
+S3 platform global, doesn't required region selection. 
+Whenever we are creating a bucket, i'll ask us to choose the region.
+In s3 we use buckets to store the data. (Bucket = Folder with unique namespace)
+
+Bucket name limitations: 
+--> Bucket names are unique across the globe.
+--> Min 3 char, Max 63 Char..
+--> Should not start with . , end with ., adjesent .., No special characters
+--> No Capital letters
+--> Should not resemble IP address format.
+
+
+Standard URL : 
+https://s3.ap-south-1.amazonaws.com/bucketname/objectname
+https://s3.ap-south-1.amazonaws.com/avinashh.website/A.png
+
+Virtual path : 
+https://bucketname.s3.regioncode.amazonaws.com/objectname
+https://avinash3.s3.ap-south-1.amazonaws.com/RDS+task.txt
+
+https://bucketname.s3.amazonaws.com/objectname
+https://avinash3.s3.amazonaws.com/RDS+task.txt
+
+==> If we want to share any data from our bucket, firstly enable "Public access settings" at bucket level. 
+
+
+
+S3 Standard : Frequently accesed data : Data spread across >=3 AZs.. : Data available immedeatly
+	Availability : 99.99 % 
+	Durability : 99.999999999 %
+
+S3 Standard-IA : Less Freq accessed data : Data spread across >=3 AZs.. : Data available immedeatly
+	Availability : 99.9 % 
+	Durability : 99.999999999 %
+
+OneZone-IA : Less Freq accessed data : Data spread across 1 AZs.. : Data available immedeatly
+	Availability : 99.5 % 
+	Durability : 99.999999999 %
+
+S3 Glacier : Long time archievals :  Data spread across >=3 AZs.. : Data not available immedeatly.. We need to restore the view the data.. Restoration : Minutes to Hours..
+	Availability : 99.99 % 
+	Durabiluty : 99.999999999 %
+
+S3 Glacier Deep Archieve: Long time archievals :  Data spread across >=3 AZs.. : Data not available immedeatly.. We need to restore the view the data.. Restoration : Hours..
+	Availability : 99.99 % 
+	Durability : 99.999999999 %
+
+RRS : Redused redundancy storage : Not Recommended by AWS : Non Imp data , Easily reprodusable data.. 
+	Availability : 99.99 % 
+	Durability : 99.99 %
+
+Intelligent tier : If we are unsure about the access patterns, we can choose this.. 
+
+
+FREE TIER : S3-Standard Only
+--> 5 GB Standard storage / Month
+--> 2000 PUT (upload)
+--> 20,000 GET (download)
+
+
+Bulk retrieval : Typically within 5-12 hours
+Standard retrieval : Typically within 3 - 5 hours
+Expedited retrieval : Typically within 1 - 5 minutes when retrieving less than 250MB
+
+
+________________________________________________________________________________________
+
+D: 12/06/2020
+
+S3 Versioning : 
+--> Track all changes happening on our s3 objects.
+--> Works as a backup option too
+
+When Versioning : HIDE..
+--> Whatever the file we delete, we'll get a delete marker.
+--> Delete the Delete Markernto get that object back.. 
+
+When Versioning : SHOW..
+--> FIle delete permenetly
+
+
+Lifecycle management rule : WE can transit objects storage class, and we can trigger to delete the objects automatically. 
+
+
+Website : 
+--> S3 Supports static website hosting option.
+
+bucket name should be same as domain name (avinash.website)
+--> For our website 99.99% avilablitiy 99.999999999% Durability
+
+--> We need to provide atleast read only on our data to load the website.
+
+_______________________________________________________________________________________
+
+D: 13/06/2020
+
+SRR (Same Region Replication) / CRR (Cross Region Replication) : 
+
+Task : Create bucket 1 and bucket 2 in Same region and configure the SRR repolication between these buckets.
+
+
+KMS : Key Management Service : 
+
+
+--> In-Transit Encryption
+	--> SSL (Secure Socket Layer) / TLS (Transport Layer Security)
+
+--> Server Side Encyrption / at-rest
+	--> SSE - S3 (Encryption and decryption manged by s3 platform)
+	--> SSE - KMS (KMS Generated and Manged keys encrypt and decrypt the data)
+	--> SSE - C (Customer Provided) (Customer generated and uploads the keys to KMS, 
+					KMS is going to manage the encry & Decry process)
+
+--> Client Side Encryption : Customers who dont want to uplaod any unenrypted data to s3 platform, they can choose CSE. On him ON-Premise/Corporate network by using his own keys he is going to encrypt the data.. That encrypted data, we can send to aws.
+
+
+AES-256 / SSE-Se  and aws/s3 ==> Whoever have valid permissions on platform they can access the data.. == FREE TIER ELIGIBILITY
+
+Customer Managed Key :
+
+Symmetric : A single encryption key that is used for both encrypt and decrypt operations
+
+Asymmetric : A public and private key pair that can be used for encrypt/decrypt or sign/verify operations
+
+
+Key Administrator Permissions : 
+
+Key Usage Permissions : 
+
+
+______________________________________________________________________________________
+
+D: 16/06/2020
+
+Object lock : 
+--> Should be enabled when we create bucket. 
+--> Versioning must be enabled. 
+
+Governance mode can be disabled by AWS accounts that have specific IAM permissions.
+Compliance mode cannot be disabled by any user, including the root account.
+
+
+Transfer acceleration : If we want to upload / download data via edge locations.
+
+Events : 
+--> SQS : Simple Queue service ..
+--> Lambda : Serverless architecture.. 
+--> SNS : Simple Notification Service : 
+	==> Navigate to "SNS" Create a "TOPIC" and add subscribers. 
+
+
+Requester pays : Instead of bucket owner, who is requesting the data, he'll get charged for the request / data transfer. 
+
+
+
+___________________________________
+
+https://join.slack.com/t/awswithavinash/shared_invite/zt-f4xzhxmb-c22h9F4TMz3UQH9nLK~8Vw
+
+_________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

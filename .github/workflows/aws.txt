@@ -1,0 +1,323 @@
+D: 02/06/2020
+
+Cloud COmputing : 
+
+Email Service : 
+
+sends an email ==> Gmail ==> Home , Cyber cafe  ==> A server running remotely.. 
+DropBox, GDrive ==> Internet, Valid Cred ==> You can access all data.. 
+
+Server ==> configuration (1M Customers) ==> QUote ==> Order (dell/hp/ibm/lenovo/rackspace) ==> 3-4 weeks to deliver ==> 100% Upfront ==> Place the server ==> Network rack , Cooling systems , UPS, Physical security
+
+Cloud ==> Need server ==> Launch it, (2 days = 48 Hours)
+
+
+Pay-as-you-go ==> Advantage of cloud computing..
+Pay-as-you-grow ==> 10000 Increase config
+++
+
+Scaling : 
+--> Vertical scaling : 
+--> Horizantal scaling
+
+CLoud Computing : NIST : 
+
+
+_____________________________________________________________________________________
+
+Do we need to have exp to learn AWS.?
+Not Required. Designed from scratch. Novoice. 
+
+Do we need to learn Linux.?
+Yes.. 2 Sessions on Linux OS.. I will provide a Free Linux Course.. 
+
+Volumes : Windows OS and Linux OS..
+
+What are the Certifications and Do we need certification to get a job..!!!!
+
+
+Foundation : Cloud Practitioner (100$)
+Associate : AWS SA - Associate (150$)
+		AWS SysOps - Admin
+		AWS Developer
+Professional : AWS SA-Pro (300$)
+		AWS DevOps- Pro
+Specialist : BigData
+		Security
+		ML/AI
+		Network
+		DB Spcialist
+		Alexa Skillset
+
+Am an Existing Developer, How AWS is useful: 
+--> Python, node.js, Go, .netCore, JSON/YAML ==> AWS Developer --> Development
+Lambda / Cloudformation =
+
+SA - Associate ==> Good amount of experience.. 		--> Architecting
+SyOps ==> Administrate the resource			--> Operational
+	
+_____________________________________________________________________________________
+
+D: 03/06/2020
+
+Cloud Computing : 
+
+Cloud Deployment Model: 
+
+Public Cloud : Open for all.. AWS, Azure, GCP.. Maintenance: Service Provider.. 
+
+Private Cloud : Available for one organization.. Maintenance: Your org, 3rd party..
+
+Hybrid Cloud : Public + Public, Public + Private.. Main: Both parties respom.. VPN, Direct Connect, DataSync, AWS storage gateway, SMS COnnector.. 
+
+Community Cloud : Available for group of org.. Main: One of the org from communoty / 3rd party..
+
+_________
+
+Service Models of the cloud computing: 
+
+SaaS : Software as a Service : Lightsail
+PaaS : Platform aaS: 		Beanstalk
+IaaS : Infrastructure aaS: 	ec2
+
+My Requirement : Website that can be acc everywhere..
+
+Application
+Data
+Runtime
+Middleware
+Operating system
+Virtualisation
+Servers
+Database
+Storage
+Network
+
+
+Security --> Physical security (bio/iris) / Application (WAF) / Network Secu (Firewall)
+Serer Rack
+Cooling system
+UPS
+
+
+_______________________________________________________________________________________
+
+D: 04/06/2020
+
+Amazon CEO : Jeff bejos
+AWS CEO : Andy Jessy
+
+AWS : Amazon Web Services : 
+
+2003 : Chris Pinkman and Benjamin black.. Written whitepapers : 
+2004 : SQS : Simple Queue Service : 
+2006 : AWS Officially Launched.. : 
+2012 : Started annual conference.. Re:Invent.. 
+
+Aws Vs Azure Vs GCP ...
+
+
+Global Infrastructure : 
+
+Region : No technical Defination for region.. It's a Geographic / Physical locations.. 
+24 Regions..  
+--> Every region contains Min of 2 AZs.. 
+
+Out of 24.. 20 for all users usage.. 
+2 Regions --> China (NWCD & Sinnet)
+2 Regions --> USGovCloud (SignUP from root account)
+
+Availability Zone / AZs : Data Centre or Combination of multiple DCs.. 76 AZs.. One AZ failure will not effect any other AZs operations.. These are desgined to isolate the individual resource failures.. 
+
+PoP (Point of Presence) / Edge Locations : CLoudfront: CDN Endpoint (Content Delivery network).. 210+ Edge.. 
+
+
+_______________________________________________________________________________________
+
+D: 05/06/2020
+
+How to create an AWS Account.
+
+https://aws.amazon.com/free
+
+Email : Root Account..
+Password & COnfirm Password
+Account Name: 
+
+Contact Information:
+Account type 
+--> Professional  
+--> Personal
+
+Payment Information : 
+
+2 INR ==> Refund
+
+CC/DC ==> Visa / Master Card / AMEX
+
+Verify your Identity:
+XXXX pops on your screens.. 
+
+--> Email : Enter the pin you got on given email.. 
+--> Phone : We will get a call from AWS, answer it, and eneter the XXXX pin.. 
+
+Choose a Support Plan : 
+
+1. Account & Billing related : 24x7, 365 Days for all support plans
+2. Soft Limit Increase : 24x7, 365 Days for all support plans
+3. Technical Support : Technical assistance.. 
+
+Basic SP : Free, 1 & 2.. No technical Support.. Trusted Advisor : 7 Core area checks...
+AWS Developer Forums, Knowledge Base Articles..
+
+Developer SP : 29$/Month.. Tech Support: 12-24 business hours from Cloud Support Associate.. 1 Primary contact can raise ticket.. unlimited tickets.. Trusted Advisor : 7 Core area checks...
+
+Business SP : 100$/Month.. 24x7 phone, email & chat support from Cloud support engineer..  Unlimited cases... IAM Users also can raise ticket.. Trusted Advisor : all checks...
+Tech Support : Production system down : < 1 hr, Production system impaired: < 4 hrs.. 
+
+Enterprise SP : 15,000$/Month.. 24x7 phone, email & chat support from Cloud support engineer..  Unlimited cases... IAM Users also can raise ticket.. Trusted Advisor : all checks...
+Tech Support : Business Critical system : < 15 Min.. Production system down : < 1 hr, Production system impaired: < 4 hrs.. Allocated with TAM (technical Account Manager).. Architectural & Operation reviews from AWS.. 
+
+
+
+____________________________________________________________________________________
+
+D: 08/06/2020
+
+Email : Root Account (Highest privilages on AWS account)
+Enable MFA on AWS Account on root: 
+
+Physical MFA device : 
+Virtual MFA devices : smartphone : Google Authenticator, Microsoft Authenticator, Authy-2-factor.. 
+U2F Key : Yubi2Key : 
+
+S3 Service : Storage Service : Gdrive
+Ec2 service : Server.. 
+
+Sharing root credentials with all these users..????  Ans : NO
+
+S3User : s3 service : S3FullAccess Policy 
+EC2User : ec2 service : EC2FullAccess Policy 
+TL : all services and application : 
+Monitoring team : Read Only : 
+
+IAM : Identity and Access Management : We can create Users, groups.. and we can manage user acceses based on their job roles / requirements.. 
+
+
+Step 1 : Provide a valid username, 
+
+Select AWS access type : 
+--> AWS Management Console : GUI : Browser : Username, password & Sign-In URL.. 
+--> Programatic Access : CLI : API, SDK, AWS CLI, 3rdparty : AccessKey ID & Secret Access Key (Dedicated session)
+
+
+Step 2 : Set Permissions.. 
+
+--> Create a GROUP, add "perission" to group.. Add user to the Group.. 
+--> COpy permissions from an Existing user.
+--> Attaching policy to the user.
+
+Policy : Permissions on our AWS document.. 
+--> Document that consists permissions on our aws account. Writtens in JSON format. 
+
+Task : Create an IAM user with "Administrator Access Policy" and login verify he is able to change the support plan or not..???  NO..
+
+Task 2 : user "Task 1" user, and try to access Billing Dashboard. How you can provide access to this user on Billing dashboard.
+
+_______________________________________________________________________________________
+
+D: 09/06/2020
+
+How to enable billing access to an IAM user.?
+
+Goto "My Account" ==> Enable "IAM billig access". 
+Create an IAM ==> "Admin / Power user" or manually associate a policy "Billing".
+
+
+policy : Set of permissions on our AWS account.
+
+--> AWS managed policy : 
+--> AWS managed policy - Job Function : 
+--> Customer Managed policy : 
+
+
+AdministratorAccess : Provides full access to AWS services and resources.
+PowerUserAccess : Provides full access to AWS services and resources, but does not allow management of Users and groups.  (Administrator - IAM)
+
+Administrator - s3 : Avinash  = Admin - S3 = "YES/NO"
+
+Creating policy : Deny S3
+
+Step 1 : Choose the service s3/ec2/iam
+Step 2 : Actions : all (DENY)
+Step 3 : resources (All resources)
+
+
+Policy : allow ec2 and s3.. AllowEC2andS3
+
+
+Implicit allow : Whatever the resoiurce access we required, we need to associate to the user. He'll get only those resources access. Remaining all resources "NO".
+
+**Always Deny have highest priority.
+
+Explicit Deny : We can give any permission to an IAM user (Admin/poweruser).. If we add DENY at any level, DENY will takes place. 
+
+implicitly deny : If you don;t add any policy, automatically it'll take DENY.
+
+Policy Simulator : We can use this to evaluate the poliy/ permissions for a policy.
+
+________________________________________________________________________________________
+
+D: 10/06/2020
+
+Permission Boundary :  Set a permissions boundary to control the maximum permissions for the user.
+
+Inline Policy : Onetime use policy.. A policy for single usage/user.
+
+
+Credential report: Track user log-in: Password expirations.. 
+
+ARN : Amazon Resource Name : 
+
+
+IAM user : s3 full Access : Want him to activate MFA.. ???
+
+IAM is a global service..
+
+CloudTrail : 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
